@@ -42,7 +42,7 @@
 			document.body.appendChild(container);
 
 			camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 100, 100000);
-			camera.position.set(5, 5 , 80);
+			camera.position.set(60, 180, 300);
 
 			scene = new THREE.Scene();
 
@@ -68,98 +68,47 @@
 
 					});
 
-					} );
+				});
 
-					renderer = new THREE.WebGLRenderer({ antialias: true });
-					renderer.setPixelRatio(window.devicePixelRatio);
-					renderer.setSize(window.innerWidth, window.innerHeight);
-					renderer.toneMapping = THREE.ACESFilmicToneMapping;
-					renderer.toneMappingExposure = 1;
-					renderer.outputEncoding = THREE.sRGBEncoding;
-					container.appendChild(renderer.domElement);
+			renderer = new THREE.WebGLRenderer({ antialias: true });
+			renderer.setPixelRatio(window.devicePixelRatio);
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			renderer.toneMapping = THREE.ACESFilmicToneMapping;
+			renderer.toneMappingExposure = 1;
+			renderer.outputEncoding = THREE.sRGBEncoding;
+			container.appendChild(renderer.domElement);
 
-					const controls = new OrbitControls(camera, renderer.domElement);
-					controls.addEventListener( 'change', render ); // use if there is no animation loop
-					controls.minDistance = 300;
-					controls.maxDistance = 1000000;
-					controls.target.set(0, 0, 10);
-					controls.update();
+			const controls = new OrbitControls(camera, renderer.domElement);
+			controls.addEventListener('change', render); // use if there is no animation loop
+			controls.minDistance = 150;
+			controls.maxDistance = 900;
+			controls.target.set(0, 0, 10);
+			controls.update();
 
-					window.addEventListener('resize', onWindowResize);
+			window.addEventListener('resize', onWindowResize);
 
-				}
+		}
 
 		function onWindowResize() {
 
-						camera.aspect = window.innerWidth / window.innerHeight;
-						camera.updateProjectionMatrix();
+			camera.aspect = window.innerWidth / window.innerHeight;
+			camera.updateProjectionMatrix();
 
-						renderer.setSize(window.innerWidth, window.innerHeight);
+			renderer.setSize(window.innerWidth, window.innerHeight);
 
-						render();
+			render();
 
-					}
+		}
 
 		//
 
 		function render() {
 
-						renderer.render(scene, camera);
+			renderer.render(scene, camera);
 
-					}
-
-
-
-
-			// function animate() {
-
-			// 	requestAnimationFrame( animate );
-
-			// 	const delta = clock.getDelta();
-
-			// 	mixer.update( delta );
-
-			// 	controls.update();
-
-			// 	stats.update();
-
-			// 	renderer.render( scene, camera );
-
-			// }
-
+		}
 
 	</script>
-
-	<!-- <script>
-			//scene , camera, ~~action~~ renderer!
-			const scene = new THREE.Scene();
-			//const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-
-			const renderer = new THREE.WebGLRenderer();
-			renderer.setSize( window.innerWidth, window.innerHeight );
-			//put them on stage(on html document)
-			document.body.appendChild( renderer.domElement );
-
-			//let's get a cube for example
-			const geometry = new THREE.BoxGeometry();
-			const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-			const cube = new THREE.Mesh( geometry, material );
-			scene.add( cube ); //add to canvas
-
-			//else camera and cube both will be at the same position and we wouldn't be able to see it
-			camera.position.z = 5;
-
-			function animate() {
-				requestAnimationFrame( animate );
-
-				cube.rotation.x += 0.01;
-				cube.rotation.y += 0.01;
-
-				renderer.render( scene, camera );
-			};
-
-			animate();
-		</script> -->
 </body>
 
 </html>
