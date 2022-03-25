@@ -2,11 +2,6 @@
   position: relative;
   display: inline-block;
   padding: 15px 70px;
-  border: 1px solid #B17461;
-  box-shadow: 0 0 0 1px rgba(0,0,0,.1),0 2px 4px 1px rgba(0,0,0,.18)
-  color: #B17461;
-  font-size: 30px;
-  font-family: arial;
   background-image: linear-gradient(rgba(0,0,0,.18), rgba(0,0,0,.18));
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -18,9 +13,35 @@
   color: #fff;
 }
 
+.signup{
+  position: relative;
+  display: inline-block;
+  padding: 15px 70px;
+  background-image: linear-gradient(rgba(255,255,255),rgba(255, 255, 255));
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size .5s, color .5s;
+}
+.signup:hover {
+  background-color: transparent;
+  /* border-color: blue;; */
+  background-size: 100% 0%;
+  color: rgb(255, 255, 255);
+}
+
 .floating {
   position: relative;
   animation: object-floating 2s infinite cubic-bezier(.45,.05,.55,.95) alternate;
+}
+
+.userPic {
+  position: relative;
+  float: right;
+  height: 50px;
+  width: 50px;
+  border-color: blueviolet;
+  border-radius: 100%;
 }
 
 @keyframes object-floating {
@@ -28,9 +49,3 @@
   to {top: 15px;}
 }
 
-display: block;
-  position: absolute;
-top: 35%;
-  left: 15%;
-  margin-left: -80px;
-  margin-top: -72px;
