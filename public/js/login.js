@@ -1,8 +1,3 @@
-// const { process_params } = require("express/lib/router");
-// require('dotenv').config();
-
-const { AuthProvider, SocialLoginType } = window.arcana.auth;
-
 
 window.onload = async () => {
     const { AuthProvider, SocialLoginType } = window.arcana.auth;

@@ -7,21 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@arcana/auth"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@alch/alchemy-web3@latest/dist/alchemyWeb3.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Uplife</title>
 </head>
 
 <body class="bg-cover bg-[url('../images/landingpage1.jpg')]">
     <nav id="navBar" class="bg-gray-800">
-    <button class="bg-indigo-700 text-white text-base font-medium px-5 py-3 border border-transparent rounded-md">Connect wallet</button>
+        <button
+            class="bg-indigo-700 text-white text-base font-medium px-5 py-3 border border-transparent rounded-md">Connect
+            wallet</button>
     </nav>
 
 
     <div>
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
             <h2 class="floating font-extrabold tracking-tight sm:text-4xl">
-                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 sm:text-7xl text-3xl ">Ready to dive in?</span>
-                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-orange-500 sm:text-8xl text-3xl">Sign Up Now</span>
+                <span
+                    class="block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 sm:text-7xl text-3xl ">Ready
+                    to dive in?</span>
+                <span
+                    class="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-orange-500 sm:text-8xl text-3xl">Sign
+                    Up Now</span>
             </h2>
             <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
                 <div class="inline-flex rounded-md shadow hover:bg-tansparent">
@@ -36,11 +44,11 @@
                 </div>
             </div>
         </div>
-        <form class="flex justify-center item-center">
+        <form onsubmit="sendToPage(); false" action="#" class="flex justify-center item-center">
             <input type="text" placeholder="Enter wallet address..."
                 class="search rounded-md w-5/6 h-10 sm:text-2xl md:text-lg text-xs caret-blue-500 focus:caret-cyan-500 text-white-500 text-center ml-5 focus:bg-transparent mt-0.5 font-serif lowercase bg-white-50 border-violet-300">
-            <button class=""><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
-                    viewBox="0 0 172 172" style=" fill:#000000;">
+            <button class=""><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50"
+                    height="50" viewBox="0 0 172 172" style=" fill:#000000;">
                     <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
                         stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
                         font-family="none" font-weight="none" font-size="none" text-anchor="none"
@@ -55,9 +63,9 @@
                 </svg></button>
         </form>
     </div>
-<script src="js/login.js"></script>
-<script src="js/redirect.js"></script>
-<script src="js/fetchNFTs.js"></script>
+    <script src="js/fetchNFTs.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/redirect.js"></script>
 </body>
 
 </html>
