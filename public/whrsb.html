@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>One NFT model</title>
+	<title>Uplife</title>
 	<style>
 		body {
 			margin: 0;
@@ -42,14 +42,14 @@
 			const container = document.createElement('div');
 			document.body.appendChild(container);
 
-			camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 100, 100000);
-			camera.position.set(60, 180, 300);
+			camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, 1, 100000);
+			camera.position.set(-300, 180, 300);
 
 			scene = new THREE.Scene();
 
 			new RGBELoader()
-				.setPath('./stylised_sky_player_home_dioroma/textures/')
-				.load('royal_esplanade_1k.hdr', function (texture) {
+				.setPath('textures/')
+				.load('quarry_01_1k.hdr', function (texture) {
 
 					texture.mapping = THREE.EquirectangularReflectionMapping;
 
@@ -60,7 +60,7 @@
 
 			// model
 
-			const loader = new GLTFLoader().setPath('./stylised_sky_player_home_dioroma/');
+			const loader = new GLTFLoader().setPath('./the_neko_stop-off__-_hand-painted_diorama/');
 				loader.load('scene.gltf', function (gltf) {
 
 					scene.add(gltf.scene);
@@ -84,7 +84,7 @@
 
 			const controls = new OrbitControls(camera, renderer.domElement);
 			controls.addEventListener('change', render); // use if there is no animation loop
-			controls.minDistance = 150;
+			controls.minDistance = 200;
 			controls.maxDistance = 900;
 			controls.target.set(0, 0, 10);
 			controls.update();

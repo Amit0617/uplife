@@ -19,7 +19,7 @@ async function sendToPage() {
     const nfts = await web3.alchemy.getNfts({
         owner: `${ownerAddr}`
     });
-    
+
     //Print owner's wallet address:
     console.log("fetching NFTs for address:", `${ownerAddr}`);
     console.log("...");
@@ -35,8 +35,23 @@ async function sendToPage() {
         console.log("token ID:", nft.id.tokenId);
     }
     console.log("===");
-    if (nfts.totalCount) {
-        window.location = '/8a1f8fd855871d063c8bc65dcb765f85769c4f76'
+    
+    switch (nfts.totalCount) {
+        case 1:
+            window.location = '/dd7a38e1e51d5c29ba251d44f94492359271a13d'
+            break;
+        case 2:
+            window.location = '/8a1f8fd855871d063c8bc65dcb765f85769c4f76'
+            break;
+        case 3:
+            window.location = '/ad528d796489545fc8429e763c4f7d4c0bf4afbc'
+            break;
+        case 4:
+            window.location = '/435a6fe924c841d595ca7467fee1fb0179632acb'
+            break;
+
+        default:
+            window.location = '/b3d806ea7039960d7dfe0bc80a9a4736b62b99f0'
     }
 
 }
