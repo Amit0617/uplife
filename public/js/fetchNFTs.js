@@ -7,13 +7,13 @@ const web3 = AlchemyWeb3.createAlchemyWeb3(
     `https://eth-mainnet.alchemyapi.io/v2/${apiKey}`,
 );
 
-// The wallet address we want to query for NFTs:
-let ownerAddr = document.querySelector('.search').value;
 // for testing purposes, easy copying ;)
 //let ownerAddr1 = "0xC33881b8FD07d71098b440fA8A3797886D831061"
 
 async function sendToPage() {
-    //preventDefault()
+    // The wallet address we want to query for NFTs:
+    let ownerAddr = document.querySelector('.search').value;
+
     console.log("hi");
     //let ownerAddr = ownerAddr1;
     const nfts = await web3.alchemy.getNfts({
@@ -36,7 +36,7 @@ async function sendToPage() {
     }
     console.log("===");
     if (nfts.totalCount) {
-        window.location = '/abcd'
+        window.location = '/8a1f8fd855871d063c8bc65dcb765f85769c4f76'
     }
 
 }

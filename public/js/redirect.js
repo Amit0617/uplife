@@ -1,2 +1,3 @@
 //redirect back to the main page closing the popup
-    AuthProvider.handleRedirectPage(`http://localhost:3000/`);
+const { AuthProvider } = window.arcana.auth;
+AuthProvider.handleRedirectPage(`http://localhost:3000/`);
