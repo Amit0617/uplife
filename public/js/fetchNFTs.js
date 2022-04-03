@@ -35,7 +35,7 @@ async function sendToPage() {
         console.log("token ID:", nft.id.tokenId);
     }
     console.log("===");
-    
+
     switch (nfts.totalCount) {
         case 1:
             window.location = '/dd7a38e1e51d5c29ba251d44f94492359271a13d'
@@ -49,7 +49,6 @@ async function sendToPage() {
         case 4:
             window.location = '/435a6fe924c841d595ca7467fee1fb0179632acb'
             break;
-
         default:
             window.location = '/b3d806ea7039960d7dfe0bc80a9a4736b62b99f0'
     }

@@ -2,7 +2,8 @@
 window.onload = async () => {
     const { AuthProvider, SocialLoginType } = window.arcana.auth;
 
-    //secret const appId =;
+    //secret 
+    const appId =;
 
     const auth = await AuthProvider.init({
         appID: `${appId}`, //secret :)
